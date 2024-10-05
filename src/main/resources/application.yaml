@@ -1,0 +1,41 @@
+spring:
+
+  profiles:
+    active: default
+
+  application:
+    name: l9g-webapp-demo-adminlte4
+
+  output:
+    ansi:
+      enabled: ALWAYS
+
+  messages:
+    basename: messages
+    encoding: UTF-8
+
+logging:
+  pattern:
+    console: "%date{yyyy-MM-dd HH:mm:ss} %magenta([%thread]) %highlight(%-5level) %logger:%line - %yellow(%msg %n)"
+  level:
+    root: INFO
+    l9g: TRACE
+    reactor.netty.http.client: OFF          # WebClient HTTP-Logging
+    reactor.netty.transport: OFF            # Netzwerktransport-Details
+    org.springframework.web.client: OFF     # RestTemplate Logging
+    org.springframework.http: OFF           # HTTP-Daten Logging
+    org.apache.http: OFF                    # Apache HttpClient Logging
+    org.apache.http.wire: OFF               # Apache HttpClient Wire Logging
+    org.springframework.web: OFF            # Spring MVC Server-seitiger Traffic
+    org.apache.coyote.http11: OFF            # Tomcat Server Logging
+    org.apache.tomcat.util.http: OFF        # Tomcat HTTP Logging
+    org.apache.tomcat.util.net.NioEndpoint: OFF
+    sun.net.www.protocol.http.HttpURLConnection: OFF
+    org.springframework.web.servlet: OFF
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info,health,metrics
+

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+  <div th:fragment="head" th:remove="tag">
+    <title>Datepicker</title>
+    <link th:rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.min.css}" ></link>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap-datepicker/css/bootstrap-datepicker.min.css}" ></link>
+    <link th:rel="stylesheet" th:href="@{/webjars/eonasdan__tempus-dominus/dist/css/tempus-dominus.min.css}" ></link>
+  </div>
+
+  <div th:fragment="main" th:remove="tag">         
+    <!--begin::App Content Header-->
+    <div class="app-content-header"> 
+      <!--begin::Container-->
+      <div class="container-fluid"> 
+        <!--begin::Row-->
+        <div style="margin-bottom: 4em"  class="row">
+          <div class="col-sm-6">
+            <h3 class="mb-0">Date and Time pickers</h3>
+          </div>
+        </div> 
+        <!--end::Row-->
+      </div> 
+      <!--end::Container-->
+    </div> 
+    <!--end::App Content Header-->
+
+    <!--begin::App Content-->
+    <div class="app-content">
+      <!--begin::Container-->
+      <div class="container-fluid">
+        <h3>Bootstrap Datepicker</h3>
+        <p>
+          Read the docs: <a target="_blank" href="https://bootstrap-datepicker.readthedocs.io/">bootstrap-datepicker</a>
+        </p>
+        <!-- begin::row -->
+        <div class="row g-4">
+          <div class="col-md-6"> 
+            <div class="card card-primary card-outline mb-4"> 
+              <div class="card-header">
+                <div class="card-title">Simple date picker</div>
+              </div> 
+              <form>
+                <div class="card-body">
+                  <div class="mb-3"> 
+                    <label for="simpledatepicker" class="form-label">Select a date</label>
+                    <div class="input-group date" id="simpledatepicker">
+                      <input type="text" class="form-control" placeholder="yyyy-MM-dd" />
+                      <span class="input-group-append">
+                        <span class="input-group-text bg-light d-block">
+                          <i class="fa-regular fa-calendar"></i>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </form> 
+            </div> 
+          </div>
+          <div class="col-md-6"> 
+            <div class="card card-primary card-outline mb-4"> 
+              <div class="card-header">
+                <div class="card-title">Select a date max 2 years in the future.</div>
+              </div> 
+              <form>
+                <div class="card-body">
+                  <div class="mb-3"> 
+                    <label for="datepicker2y" class="form-label">Expiration date</label> 
+                    <div class="input-group date" id="datepicker2y">
+                      <input type="text" class="form-control" placeholder="yyyy-MM-dd" />
+                      <span class="input-group-append">
+                        <span class="input-group-text bg-light d-block">
+                          <i class="fa-regular fa-calendar"></i>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </form> 
+            </div> 
+          </div>
+        </div>
+        <!-- end::row -->
+
+        <h3>Tempus Dominus</h3>
+        <!-- https://github.com/Eonasdan/tempus-dominus -->
+        <!-- https://getdatepicker.com/6/ -->
+
+        <p>
+          Homepage: <a target="_blank" href="https://getdatepicker.com/6/">Tempus Dominus</a>
+        </p>
+
+        <!-- begin::row -->
+        <div class="row g-4">
+          <div class="col-md-6"> 
+            <div class="card card-success card-outline mb-4"> 
+              <div class="card-header">
+                <div class="card-title">Simple time picker</div>
+              </div> 
+              <form>
+                <div class="card-body">
+                  <div class="mb-3"> 
+                    <label for="dtsimpletimepicker" class="form-label">Select a time</label>
+                    <div class="input-group date" id="dtsimpletimepicker">
+                      <input type="text" class="form-control" placeholder="HH:mm" />
+                      <span class="input-group-append">
+                        <span class="input-group-text bg-light d-block">
+                          <i class="fa-regular fa-clock"></i>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </form> 
+            </div> 
+          </div>
+          <div class="col-md-6"> 
+            <div class="card card-success card-outline mb-4"> 
+              <div class="card-header">
+                <div class="card-title">Date and time picker</div>
+              </div> 
+              <form>
+                <div class="card-body">
+                  <div class="mb-3"> 
+                    <label for="dtsimpledatetimepicker" class="form-label">Select a date and time</label> 
+                    <div class="input-group date" id="dtsimpledatetimepicker">
+                      <input type="text" class="form-control" placeholder="yyyy-MM-dd HH:mm" />
+                      <span class="input-group-append">
+                        <span class="input-group-text bg-light d-block">
+                          <i class="fa-regular fa-calendar"></i>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </form> 
+            </div> 
+          </div>
+        </div>
+        <!-- end::row -->
+
+        <!-- begin::row -->
+        <div class="row g-4">
+          <div class="col-md-6"> 
+            <div class="card card-success card-outline mb-4"> 
+              <div class="card-header">
+                <div class="card-title">Simple Date picker</div>
+              </div> 
+              <form>
+                <div class="card-body">
+                  <div class="mb-3"> 
+                    <label for="dtsimpledatepicker" class="form-label">Select a date</label>
+                    <div class="input-group date" id="dtsimpledatepicker">
+                      <input type="text" class="form-control" placeholder="yyyy-MM-dd" />
+                      <span class="input-group-append">
+                        <span class="input-group-text bg-light d-block">
+                          <i class="fa-regular fa-calendar"></i>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </form> 
+            </div> 
+          </div>
+          <div class="col-md-6"> 
+            <div class="card card-success card-outline mb-4"> 
+              <div class="card-header">
+                <div class="card-title">Select a date max 2 years in the future.</div>
+              </div> 
+              <form>
+                <div class="card-body">
+                  <div class="mb-3"> 
+                    <label for="dtdatepicker2y" class="form-label">Expiration date</label> 
+                    <div class="input-group date" id="dtdatepicker2y">
+                      <input type="text" class="form-control" placeholder="yyyy-MM-dd" />
+                      <span class="input-group-append">
+                        <span class="input-group-text bg-light d-block">
+                          <i class="fa-regular fa-calendar"></i>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </form> 
+            </div> 
+          </div>
+        </div>
+        <!-- end::row -->
+
+
+      </div> 
+      <!--end::Container-->
+    </div> 
+    <!--end::App Content-->
+  </div> 
+
+  <div th:fragment="scripts" th:remove="tag">
+    <script th:src="@{/webjars/bootstrap-datepicker/js/bootstrap-datepicker.min.js}"></script>
+    <script th:src="@{/webjars/eonasdan__tempus-dominus/dist/js/tempus-dominus.min.js}"></script>
+    <script>
+      $(document).ready(function () {
+        var today = new Date();
+        today.setHours(0);
+        today.setMinutes(0);
+        today.setSeconds(0);
+        today.setMilliseconds(1);
+
+        var twoYearsFromNow = new Date(today.getTime());
+        twoYearsFromNow.setFullYear(today.getFullYear() + 2);
+        twoYearsFromNow.setDate(twoYearsFromNow.getDate() - 1);
+        twoYearsFromNow.setHours(23);
+        twoYearsFromNow.setMinutes(59);
+        twoYearsFromNow.setSeconds(59);
+        twoYearsFromNow.setMilliseconds(99);
+
+        $('#simpledatepicker').datepicker({
+          format: 'yyyy-mm-dd',
+          todayHighlight: true,
+          autoclose: true
+        });
+        $('#datepicker2y').datepicker({
+          format: 'yyyy-mm-dd',
+          startDate: today,
+          endDate: twoYearsFromNow,
+          todayHighlight: true,
+          autoclose: true
+        });
+
+        // Initialisierung des Tempus Dominus Time Pickers
+        new tempusDominus.TempusDominus(document.getElementById('dtsimpletimepicker'), {
+          display: {
+            components: {
+              calendar: false,
+              hours: true,
+              minutes: true,
+              seconds: false,
+            },
+            buttons: {
+              today: false,
+              clear: true,
+              close: true
+            },
+            theme: 'light'
+          },
+          localization: {
+            hourCycle: 'h23', // Aktiviert das 24-Stunden-Format (h23 steht für 00-23)
+            format: 'HH:mm' // Definiert das Anzeigeformat für HH:mm
+          }
+        });
+
+        new tempusDominus.TempusDominus(document.getElementById('dtsimpledatetimepicker'), {
+          display: {
+            theme: 'light'
+          },
+          localization: {
+            hourCycle: 'h23',
+            format: 'yyyy-MM-dd HH:mm'
+          }
+        });
+
+        new tempusDominus.TempusDominus(document.getElementById('dtsimpledatepicker'), {
+          display: {
+            components: {
+              calendar: true,
+              hours: false,
+              minutes: false,
+              seconds: false
+            },
+            theme: 'light'
+          },
+          localization: {
+            hourCycle: 'h23',
+            format: 'yyyy-MM-dd'
+          }
+        });
+
+        new tempusDominus.TempusDominus(document.getElementById('dtdatepicker2y'), {
+          display: {
+            components: {
+              calendar: true,
+              hours: false,
+              minutes: false,
+              seconds: false
+            },
+            theme: 'light'
+          },
+          localization: {
+            hourCycle: 'h23',
+            format: 'yyyy-MM-dd'
+          },
+          restrictions: {
+            minDate: today,
+            maxDate: twoYearsFromNow
+          }
+        });
+
+      });
+
+    </script>
+
+
+  </div>
+
+</html>

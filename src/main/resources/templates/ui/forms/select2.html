@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+  <div th:fragment="head" th:remove="tag">
+    <title>Select2 Forms</title>
+    <style>
+      select2ajax {
+        /* tag only */
+      }
+    </style>
+  </div>
+
+  <div th:fragment="main" th:remove="tag">         
+    <!--begin::App Content Header-->
+    <div class="app-content-header"> 
+      <!--begin::Container-->
+      <div class="container-fluid"> 
+        <!--begin::Row-->
+        <div class="row">
+          <div class="col-sm-6">
+            <h3 class="mb-0">Select2 Forms</h3>
+          </div>
+        </div> 
+        <!--end::Row-->
+      </div> 
+      <!--end::Container-->
+    </div> 
+    <!--end::App Content Header-->
+
+    <!--begin::App Content-->
+    <div class="app-content">
+      <!--begin::Container-->
+      <div class="container-fluid">
+
+        <div class="row g-4">
+          <div class="col-md-6"> 
+            <div class="card card-primary card-outline mb-4"> 
+              <div class="card-header">
+                <div class="card-title">Select2 Example 1</div>
+              </div> 
+              <form>
+                <div class="card-body">
+                  <div class="mb-3"> 
+                    <label for="select2Minimal" class="form-label">Minimal</label> 
+                    <select id="select2Minimal" class="form-control select2" style="width: 100%;">
+                      <option selected="selected">Alabama</option>
+                      <option>Alaska</option>
+                      <option>California</option>
+                      <option>Delaware</option>
+                      <option>Tennessee</option>
+                      <option>Texas</option>
+                      <option>Washington</option>
+                    </select>
+                  </div>
+                </div>
+              </form> 
+            </div> 
+          </div>
+          <div class="col-md-6"> 
+            <div class="card card-success card-outline mb-4"> 
+              <div class="card-header">
+                <div class="card-title">Select2 Example 2</div>
+              </div> 
+              <form>
+                <div class="card-body">
+                  <div class="mb-3"> 
+                    <label for="select2Multiple" class="form-label">Multiple</label> 
+                    <select id="select2Multiple" class="select2" multiple="multiple" data-placeholder="Select a State" style="width: 100%;">
+                      <option>Alabama</option>
+                      <option>Alaska</option>
+                      <option>California</option>
+                      <option>Delaware</option>
+                      <option>Tennessee</option>
+                      <option>Texas</option>
+                      <option>Washington</option>
+                    </select>
+                  </div>
+                </div>
+              </form> 
+            </div> 
+          </div>
+        </div>
+
+        <div class="row g-4">
+
+          <div class="col-md-6"> 
+            <div class="card card-primary card-outline mb-4"> 
+              <div class="card-header">
+                <div class="card-title">Select2 Example 3 (AJAX Options)</div>
+              </div> 
+              <form th:action="@{/api/v1/persons}" th:method="POST">
+                <div class="card-body">
+                  <div class="mb-3"> 
+                    <label for="select2ajax1" class="form-label">Minimal</label> 
+                    <select required="true" name="selectedPerson" id="select2ajax1" class="form-control select2ajax" style="width: 100%;"></select>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form> 
+            </div> 
+          </div>
+
+          <div class="col-md-6"> 
+            <div class="card card-success card-outline mb-4"> 
+              <div class="card-header">
+                <div class="card-title">Select2 Example 4 (AJAX Options)</div>
+              </div> 
+              <form th:action="@{/api/v1/persons}" th:method="POST">
+                <div class="card-body">
+                  <div class="mb-3"> 
+                    <label for="select2ajax2" class="form-label">Multiple</label> 
+                    <select required="true" name="selectedPerson" id="select2ajax2" class="form-control select2ajax" multiple="multiple" data-placeholder="Select a Person" style="width: 100%;"></select>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Submit</button> 
+                </div>
+              </form> 
+            </div> 
+          </div>
+
+        </div> 
+
+        <!--end::Container-->
+      </div> 
+      <!--end::App Content-->
+
+    </div>
+  </div> 
+
+  <div th:fragment="scripts" th:remove="tag">
+    <script th:inline="javascript">
+      const apiUrl = /*[[@{/api/v1/persons}]]*/ '';
+
+      $('.select2ajax').select2({
+        theme: 'bootstrap-5',
+        ajax: {
+          url: apiUrl,
+          dataType: 'json'
+        }
+      });
+    </script>
+  </div>
+
+</html>

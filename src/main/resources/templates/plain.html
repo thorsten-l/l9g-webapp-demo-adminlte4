@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Thymeleaf AdminLTE4 Demo</title>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap-icons/font/bootstrap-icons.css}" ></link>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" ></link>
+    <link th:rel="stylesheet" th:href="@{/webjars/select2/dist/css/select2.min.css}" ></link>
+    <link th:rel="stylesheet" th:href="@{/webjars/select2-bootstrap-5-theme/dist/select2-bootstrap-5-theme.min.css}" ></link>
+  </head>
+
+  <body>
+    <div style="margin-top: 2em" class="container">
+      <h1>Plain Sandbox</h1>
+
+      <h3>Select2 - Simple</h3>
+
+      <form>
+        <select class="form-select select2" data-placeholder="Choose one thing">
+          <option></option>
+          <option>Reactive</option>
+          <option>Solution</option>
+          <option>Conglomeration</option>
+          <option>Algoritm</option>
+          <option>Holistic</option>
+        </select>
+      </form>
+      
+      
+      
+      
+      
+      <!-- ----------------------------------------------------------------- -->
+      <p style="margin-top: 2em">
+        <a th:href="@{/}">HOME</a>
+      </p>
+    </div>
+
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    <script th:src="@{/webjars/select2/dist/js/select2.min.js}" ></script>
+
+    <script>      
+      $('.select2').select2({
+        theme: "bootstrap-5",
+        width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
+        placeholder: $(this).data('placeholder'),
+      });
+    </script>
+  </body>
+</html>

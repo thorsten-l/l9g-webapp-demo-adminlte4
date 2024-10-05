@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+  <div th:fragment="scripts" th:remove="tag">
+    <!--begin::Scripts-->
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script th:src="@{/webjars/overlayscrollbars/browser/overlayscrollbars.browser.es6.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    <script th:src="@{/js/adminlte.min.js}"></script>
+    <script th:src="@{/webjars/select2/dist/js/select2.min.js}" ></script>
+
+    <!--begin::Third Party Plugin(OverlayScrollbars)-->
+    <script>
+      const SELECTOR_SIDEBAR_WRAPPER = ".sidebar-wrapper";
+
+      const Default = {
+        scrollbarTheme: "os-theme-light",
+        scrollbarAutoHide: "leave",
+        scrollbarClickScroll: true
+      };
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const sidebarWrapper = document.querySelector(SELECTOR_SIDEBAR_WRAPPER);
+
+        if (sidebarWrapper && typeof OverlayScrollbarsGlobal?.OverlayScrollbars !== "undefined") {
+          OverlayScrollbarsGlobal.OverlayScrollbars(sidebarWrapper, {
+            scrollbars: {
+              theme: Default.scrollbarTheme,
+              autoHide: Default.scrollbarAutoHide,
+              clickScroll: Default.scrollbarClickScroll
+            }
+          });
+        }
+      });
+    </script> 
+    <!--end::OverlayScrollbars Configure-->
+    <script>
+      $('.select2').select2({
+        theme: 'bootstrap-5'
+      });
+    </script>
+    <!--end::Scripts-->
+  </div>
+</html>

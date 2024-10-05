@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <div th:replace="~{fragments/head::head}"></div>
+    <div th:replace="~{${layoutFragment}::head}"></div>
+  </head>
+
+  <body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
+    <!--begin::App Wrapper-->
+    <div class="app-wrapper">
+      <div th:replace="~{fragments/header::header}"></div>
+      <div th:replace="~{fragments/sidebar::sidebar}"></div>
+
+      <!--begin::App Main-->
+      <main class="app-main">
+        <div th:replace="~{${layoutFragment}::main}"></div>
+      </main> 
+      <!--end::App Main--> 
+      
+      <div th:replace="~{fragments/footer::footer}"></div>
+    </div> 
+    <!--end::App Wrapper-->
+    
+    <div th:replace="~{fragments/scripts::scripts}"></div>
+    <div th:replace="~{${layoutFragment}::scripts}"></div>
+  </body>
+</html>
