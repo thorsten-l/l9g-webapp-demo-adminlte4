@@ -14,3 +14,4 @@ This repository was originally developed for in-house training.
 - [bootstrap-datepicker](https://bootstrap-datepicker.readthedocs.io/)
 - [Tempus Dominus](https://getdatepicker.com/6/)
 - [Popper.js](https://popper.js.org/docs/v2/)
+- [jQuery](https://jquery.com/)
