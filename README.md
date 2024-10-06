@@ -3,6 +3,7 @@
 This repository was originally developed for in-house training.
 
 ## Software packages used in this project
+- [AdminLTE](https://adminlte.io/) / [AdminLTE on GitHub](https://github.com/ColorlibHQ/AdminLTE)
 - [Bootstrap 5](https://getbootstrap.com/)
 - [Bootstrap Icons](https://icons.getbootstrap.com/)
 - [bootstrap-datepicker](https://bootstrap-datepicker.readthedocs.io/)
