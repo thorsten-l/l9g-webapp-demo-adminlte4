@@ -1,6 +1,7 @@
 # l9g-webapp-demo-adminlte4
 
-This repository was originally developed for in-house training.
+This is a Java application built using Spring Boot and ThymeLeaf, designed to showcase a sample Admin Dashboard created with AdminLTE 4 and Bootstrap 5.
+Originally developed for in-house training, this repository features a fully functional admin interface.
 
 ## Software packages used in this project
 - [AdminLTE](https://adminlte.io/) / [AdminLTE on GitHub](https://github.com/ColorlibHQ/AdminLTE)
