@@ -16,6 +16,7 @@ Originally developed for in-house training, this repository features a fully fun
 - [Select2](https://select2.org/)
 - [Select2 Bootstrap 5 theme](https://apalfrey.github.io/select2-bootstrap-5-theme/)
 - [Spring Boot](https://spring.io/projects/spring-boot) / [start.sprint.io](https://start.spring.io)
+- [SweetAlert2](https://sweetalert2.github.io/)
 - [Tempus Dominus](https://getdatepicker.com/6/)
 - [ThymeLeaf](https://www.thymeleaf.org/)
 - [WebJars](https://www.webjars.org/)
